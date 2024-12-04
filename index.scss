@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: darkcyan;
+
+    .ruta{
+        background: white;
+        width: 90%;
+        max-width: 500px;
+        margin: 100px auto 0px;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    .ruta h1{
+        font-weight: 25px;
+        color: darkgreen;
+        font-weight: 600;
+        border-bottom: 1px solid darkcyan;
+        padding-bottom: 30px;
+    }
+}
