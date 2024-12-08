@@ -1,9 +1,9 @@
 const questions = [
     { 
-        question: "Vilken stad är bäst i Sverige",
+        question: "Stockholm är den bästa staden i sverige.",
         answers: [
-            {text: "ABC", correct: true},
-            {text: "DEF", correct: false},
+            {text: "Sant", correct: true},
+            {text: "Falskt", correct: false},
         ]
     },
     { 
@@ -119,6 +119,8 @@ function selectAnswer(e){
     }
 
 }
-blablabla
+
 
 startQuiz();
+
+// Knapparna funkar inte något fel i min function eller eventlistener samt går det inte att targeta incorrect/correct i scss
