@@ -1,5 +1,3 @@
-@charset "UTF-8";
-@import url(variables.scss);
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +7,7 @@
 body {
   background-color: black;
 }
-body .ruta {
+body .app {
   background: white;
   width: 90%;
   max-width: 500px;
@@ -24,15 +22,18 @@ body .ruta h1 {
   border-bottom: 1px solid darkcyan;
   padding-bottom: 30px;
 }
-body .quizz {
+body .quiz {
   padding: 30px 0;
 }
-body .quizz h2 {
+body .quiz .answer-btn {
+  padding-top: 30px;
+}
+body .quiz h2 {
   font-size: 35px;
   color: darkcyan;
   font-weight: 600;
 }
-body .knapp {
+body .btn {
   background-color: #fff;
   color: darkcyan;
   width: 100%;
@@ -44,11 +45,11 @@ body .knapp {
   cursor: pointer;
   transition: 0.3s;
 }
-body .knapp:hover {
+body .btn:hover {
   background-color: #222;
   color: #fff;
 }
-body #nästaknapp {
+body #next-btn {
   background: #001e4d;
   color: #fff;
   width: 150px;
@@ -58,4 +59,12 @@ body #nästaknapp {
   border-radius: 4px;
   cursor: pointer;
   display: none;
+}
+
+.btn correct {
+  background: green;
+}
+
+.incorrect {
+  background: red;
 }/*# sourceMappingURL=index.css.map */

@@ -1,4 +1,4 @@
-@import url(variables.scss);
+
 
 * {
     margin: 0;
@@ -9,7 +9,7 @@
 body{
     background-color: black;
 
-    .ruta{
+    .app{
         background: white;
         width: 90%;
         max-width: 500px;
@@ -24,8 +24,12 @@ body{
         border-bottom: 1px solid darkcyan;
         padding-bottom: 30px;
     }
-    .quizz {
+    .quiz {
         padding: 30px 0;
+
+        .answer-btn{
+            padding-top: 30px;
+        }
         h2{
             font-size: 35px;
             color: darkcyan;
@@ -33,7 +37,7 @@ body{
         }
     }
 
-    .knapp{
+    .btn{
         background-color: #fff;
         color: darkcyan;
         width: 100%;
@@ -45,11 +49,11 @@ body{
         cursor: pointer;
         transition: 0.3s;
     }
-    .knapp:hover{
+    .btn:hover{
         background-color: #222;
         color: #fff;
     }
-    #nästaknapp{
+    #next-btn{
     
         background:#001e4d;
         color: #fff;
@@ -64,4 +68,11 @@ body{
     }
    
     
+}
+
+.btn correct{
+    background: green;
+}
+.incorrect {
+    background: red;
 }
