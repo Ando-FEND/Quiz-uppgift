@@ -1,45 +1,40 @@
-
-
 * {
     margin: 0;
     padding:0;
     box-sizing: border-box;
 }
-
 body{
-    background-color: black;
-
-    .app{
-        background: white;
+    background-color: rgb(228, 226, 226);
+    .quiz{
+        background: rgb(215, 247, 245);
         width: 90%;
-        max-width: 500px;
+        max-width: 400px;
         margin: 100px auto 0px;
-        border-radius: 10px;
+        border-radius: 15px;
         padding: 30px;
+        border: 1px solid black;
     }
-    .ruta h1{
-        font-weight: 25px;
-        color: darkcyan;
-        font-weight: 600;
-        border-bottom: 1px solid darkcyan;
-        padding-bottom: 30px;
+     h1{
+        color: black;
+        font-weight: 100;
+        border-bottom: 1px solid black;
+        padding-bottom: 5px;
     }
-    .quiz {
+    .container {
         padding: 30px 0;
-
-        .answer-btn{
+        .svars-knapp{
             padding-top: 30px;
         }
         h2{
-            font-size: 35px;
-            color: darkcyan;
-            font-weight: 600;
+            font-size: 25px;
+            color: black;
+            font-weight: 100;
+            padding-bottom: 30px;
         }
     }
-
-    .btn{
+    .knapp{
         background-color: #fff;
-        color: darkcyan;
+        color: black;
         width: 100%;
         border: 1px solid #222;
         padding: 10px;
@@ -48,31 +43,32 @@ body{
         border-radius: 3px;
         cursor: pointer;
         transition: 0.3s;
+        font-size: 20px;
     }
-    .btn:hover{
-        background-color: #222;
+    .knapp:hover:not([disabled]){
+        background-color: #585555;
         color: #fff;
     }
-    #next-btn{
-    
-        background:#001e4d;
-        color: #fff;
+    .knapp:disabled{
+        cursor: no-drop;
+    }
+    #nästa-knapp{
+        background: rgb(228, 226, 226);
+        color: black;
         width: 150px;
         border:0;
         padding: 10px;
         margin: 20px auto 0;
         border-radius: 4px;
         cursor: pointer;
+        border: 1px solid black;
         display: none;
-
+        font-size: 20px;
     }
-   
-    
-}
-
-.correct{
-    background: green;
-}
-.incorrect {
-    background: red;
+    .correct{
+        background: green;
+    }
+    .incorrect {
+        background: red;
+    }
 }

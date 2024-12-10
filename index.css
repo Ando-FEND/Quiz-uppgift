@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -5,37 +6,38 @@
 }
 
 body {
-  background-color: black;
-}
-body .app {
-  background: white;
-  width: 90%;
-  max-width: 500px;
-  margin: 100px auto 0px;
-  border-radius: 10px;
-  padding: 30px;
-}
-body .ruta h1 {
-  font-weight: 25px;
-  color: darkcyan;
-  font-weight: 600;
-  border-bottom: 1px solid darkcyan;
-  padding-bottom: 30px;
+  background-color: rgb(228, 226, 226);
 }
 body .quiz {
+  background: rgb(215, 247, 245);
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto 0px;
+  border-radius: 15px;
+  padding: 30px;
+  border: 1px solid black;
+}
+body h1 {
+  color: black;
+  font-weight: 100;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+body .container {
   padding: 30px 0;
 }
-body .quiz .answer-btn {
+body .container .svars-knapp {
   padding-top: 30px;
 }
-body .quiz h2 {
-  font-size: 35px;
-  color: darkcyan;
-  font-weight: 600;
+body .container h2 {
+  font-size: 25px;
+  color: black;
+  font-weight: 100;
+  padding-bottom: 30px;
 }
-body .btn {
+body .knapp {
   background-color: #fff;
-  color: darkcyan;
+  color: black;
   width: 100%;
   border: 1px solid #222;
   padding: 10px;
@@ -44,27 +46,31 @@ body .btn {
   border-radius: 3px;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 20px;
 }
-body .btn:hover {
-  background-color: #222;
+body .knapp:hover:not([disabled]) {
+  background-color: #585555;
   color: #fff;
 }
-body #next-btn {
-  background: #001e4d;
-  color: #fff;
+body .knapp:disabled {
+  cursor: no-drop;
+}
+body #nästa-knapp {
+  background: rgb(228, 226, 226);
+  color: black;
   width: 150px;
   border: 0;
   padding: 10px;
   margin: 20px auto 0;
   border-radius: 4px;
   cursor: pointer;
+  border: 1px solid black;
   display: none;
+  font-size: 20px;
 }
-
-.correct {
+body .correct {
   background: green;
 }
-
-.incorrect {
+body .incorrect {
   background: red;
 }/*# sourceMappingURL=index.css.map */
