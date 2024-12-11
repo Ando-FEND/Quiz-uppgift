@@ -79,7 +79,7 @@ function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Nästa fråga";
-    questionElement.style.color = "black";
+    questionElement.style.color = "var(--text-color)";
     showQuestion();
 }
 function showQuestion(){

@@ -1,4 +1,22 @@
 @charset "UTF-8";
+:root {
+  --base-color: white;
+  --base-variant: white;
+  --text-color:black;
+  --primary-color:rgb(52, 52, 191);
+  --accent-color:rgb(76, 76, 231);
+  --border-color:black;
+}
+
+.mörktläge {
+  --base-color:rgb(0, 0, 0);
+  --base-variant: rgb(25, 9, 129);
+  --text-color:rgb(255, 255, 255);
+  --primary-color:rgb(52, 52, 191);
+  --accent-color:rgb(76, 76, 231);
+  --border-color:white;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,21 +24,21 @@
 }
 
 body {
-  background-color: rgb(228, 226, 226);
+  background-color: var(--base-color);
 }
 body .quiz {
-  background: rgb(215, 247, 245);
+  background: var(--base-variant);
   width: 90%;
   max-width: 400px;
   margin: 100px auto 0px;
   border-radius: 15px;
   padding: 30px;
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
 }
 body h1 {
-  color: black;
+  color: var(--text-color);
   font-weight: 100;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 5px;
 }
 body .container {
@@ -31,15 +49,15 @@ body .container .svars-knapp {
 }
 body .container h2 {
   font-size: 25px;
-  color: black;
+  color: var(--text-color);
   font-weight: 100;
   padding-bottom: 30px;
 }
 body .knapp {
-  background-color: #fff;
-  color: black;
+  background-color: var(--base-variant);
+  color: var(--text-color);
   width: 100%;
-  border: 1px solid #222;
+  border: 1px solid var(--border-color);
   padding: 10px;
   margin: 10px 0px;
   text-align: left;
@@ -49,15 +67,15 @@ body .knapp {
   font-size: 20px;
 }
 body .knapp:hover:not([disabled]) {
-  background-color: #585555;
+  background-color: #000000;
   color: #fff;
 }
 body .knapp:disabled {
   cursor: no-drop;
 }
 body #nästa-knapp {
-  background: rgb(228, 226, 226);
-  color: black;
+  background: var(--base-variant);
+  color: var(--text-color);
   width: 150px;
   border: 0;
   padding: 10px;
