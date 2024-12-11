@@ -1,23 +1,33 @@
+@font-face {
+    font-family:"MemphisRiver" ;
+    src: url(W95FA/w95fa.woff);
+}
+
+
+
 :root{
-    --base-color: white;
-    --base-variant: white;
+    --base-color: rgb(255, 255, 255);
+    --base-variant: rgb(230, 230, 230);
     --text-color:black;
     --primary-color:rgb(52, 52, 191);
     --accent-color:rgb(76, 76, 231);
     --border-color:black;
+    --ändra-tema:Black;
 }
 .mörktläge{
-    --base-color:rgb(0, 0, 0);
-    --base-variant: rgb(25, 9, 129);
+    --base-color:rgb(3, 0, 30);
+    --base-variant:#018281;
     --text-color:rgb(255, 255, 255);
     --primary-color:rgb(52, 52, 191);
     --accent-color:rgb(76, 76, 231);
     --border-color:white;
+    --ändra-tema:white;
 }
 * {
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    font-family: "MemphisRiver", sans-serif;
 }
 
 body{
@@ -27,7 +37,6 @@ body{
         width: 90%;
         max-width: 400px;
         margin: 100px auto 0px;
-        border-radius: 15px;
         padding: 30px;
         border: 1px solid var(--border-color);
     }
@@ -57,7 +66,6 @@ body{
         padding: 10px;
         margin: 10px 0px;
         text-align: left;
-        border-radius: 3px;
         cursor: pointer;
         transition: 0.3s;
         font-size: 20px;
@@ -76,9 +84,8 @@ body{
         border:0;
         padding: 10px;
         margin: 20px auto 0;
-        border-radius: 4px;
         cursor: pointer;
-        border: 1px solid black;
+        border: 1px solid var(--text-color);
         display: none;
         font-size: 20px;
     }
@@ -88,4 +95,30 @@ body{
     .incorrect {
         background: red;
     }
+
+    
+}
+#ändra-tema{
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: solid black 1px;
+    background-color: base;
+}
+#ändra-tema svg:last-child{
+    display: none;
+    
+}
+
+
+.mörktläge #ändra-tema svg:first-child{
+    display: none;
+}
+.mörktläge #ändra-tema svg:last-child{
+    display: block;
 }

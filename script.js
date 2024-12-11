@@ -1,3 +1,5 @@
+
+//Alla mina frågor
 const questions = [
     {
         question: "Jorden är den största planeten i vårt solsystem.",
@@ -75,6 +77,8 @@ const answerButtons = document.getElementById("svara-knapp");
 const nextButton = document.getElementById("nästa-knapp");
 let currentQuestionIndex = 0;
 let score = 0;
+
+
 function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
@@ -82,6 +86,8 @@ function startQuiz(){
     questionElement.style.color = "var(--text-color)";
     showQuestion();
 }
+
+// visar 
 function showQuestion(){
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -122,6 +128,8 @@ function selectAnswer(x){
     });
     nextButton.style.display = "block";
 }
+
+//visar olika färgerna beroende på poäng
 function showScore(){
     resetState();
     let scoreColor;
@@ -157,3 +165,25 @@ nextButton.addEventListener("click", ()=>{
     }
 });
 startQuiz();
+//darkmode knappen
+let mörktläge = localStorage.getItem("mörktläge")
+
+const ändraTema = document.getElementById("ändra-tema")
+
+const enablemörktläge = () => {
+    document.body.classList.add("mörktläge")
+    localStorage.setItem("mörktläge", "active")
+}
+
+const disablemörktläge = () => {
+    document.body.classList.remove("mörktläge")
+    localStorage.setItem("mörktläge", null)
+}
+
+if(mörktläge === "active") enablemörktläge()
+
+ändraTema.addEventListener("click", () => {
+    mörktläge = localStorage.getItem('mörktläge')
+    mörktläge !== "active" ? enablemörktläge() : disablemörktläge()
+})
+
