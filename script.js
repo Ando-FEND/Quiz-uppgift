@@ -87,7 +87,7 @@ function startQuiz(){
     showQuestion();
 }
 
-// visar 
+// visar frågorna och lägger även till vilken fråga man är på tex 1. 2. skulle ha gjort en som visade 1/10 tex men det hann jag inte med.
 function showQuestion(){
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -110,6 +110,8 @@ function resetState(){
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
+
+// Lägger till klasserna correct/incorrect som är styleade i scss för att visa vilket svar som är rätt ifall man svarar fel, gör även så att man inte kan klicka på något efter man svarat.
 function selectAnswer(x){
     const selectedBtn = x.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
@@ -129,7 +131,7 @@ function selectAnswer(x){
     nextButton.style.display = "block";
 }
 
-//visar olika färgerna beroende på poäng
+//visar olika färgerna beroende på poäng och ger ett feedback message beroende på poäng i en specifik färg
 function showScore(){
     resetState();
     let scoreColor;
@@ -149,6 +151,8 @@ function showScore(){
     nextButton.innerHTML = "Testa igen!";
     nextButton.style.display = "block";
 }
+
+//hanterar nästa-knappen om de finns mer frågor ta nästa fråga om inte visa slutpoängen
 function handleNextButton(){
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
@@ -165,7 +169,7 @@ nextButton.addEventListener("click", ()=>{
     }
 });
 startQuiz();
-//darkmode knappen
+//darkmode knappen med localstorage så att man kan refresha sidan ifall man vill ochden kommer ihåg vilket tema den va i.
 let mörktläge = localStorage.getItem("mörktläge")
 
 const ändraTema = document.getElementById("ändra-tema")
@@ -187,3 +191,9 @@ if(mörktläge === "active") enablemörktläge()
     mörktläge !== "active" ? enablemörktläge() : disablemörktläge()
 })
 
+// saker jag skulle vilja ha hunnit med
+// progress-bar 
+// 1/10 fråge-räknare
+// kanske roligare styling
+//sparade variabler i scss 
+//börjat tidigare och inte slackat som en idiot :)
